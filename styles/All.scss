@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Play-Bold";
+  src: url("../fonts/Play-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("../fonts/Play-Regular.ttf");
+}
+
+ul li {
+  list-style: none;
+}
+
+@mixin maxWidth {
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin buttonPlus {
+  width: 59px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+  box-sizing: border-box;
+  z-index: 3;
+  position: relative;
+  transition: 0.2s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+}
+
+@mixin mainTitles {
+  font-family: "Play-Bold", sans-serif;
+  font-size: 34px;
+  line-height: 110%;
+  color: #333333;
+}
+
+@mixin podrobnee {
+  box-sizing: border-box;
+  padding: 14.5px 50.5px;
+  font-family: "Play-Bold", sans-serif;
+  font-size: 15px;
+  line-height: 130%;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+$bgColor: #01192F;
+$level-1: 100px;
+$level-2: 60px;
+$level-3: 50px;
+$level-4: 30px;
+
+.none {
+  display: none !important;
+}
+
+body, h1, h2, h3, h4, h5, ul, li, p {
+  margin: 0;
+  padding: 0;
+}

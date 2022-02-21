@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Play-Bold";
+  src: url("../fonts/Play-Bold.ttf");
+}
+@font-face {
+  font-family: "Play";
+  src: url("../fonts/Play-Regular.ttf");
+}
+.none {
+  display: none !important;
+}
+
+body, h1, h2, h3, h4, h5, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=All.css.map */

@@ -49,4 +49,35 @@ $(document).ready(function(){
         headerBurgerClose.addClass('none');
         headerBurgerOpen.removeClass('none');
     });
+
+    let catalogClose = $('.catalog-selection__close')[0];
+    let catalog = $('.navigation__catalog-selection')[0];
+    let catalogButton = $('.navigation__page_catalog')[0];
+
+    catalogButton.addEventListener('mouseover',showCatalog);
+    catalogClose.addEventListener('click',hideCatalog);
+
+    function showCatalog () {
+            catalog.classList.remove('none');
+    }
+
+    function hideCatalog (e) {
+        e.preventDefault();
+        catalog.classList.add('none');
+    }
+
+    let articleTitles = $('.articles__title')
+    let articles = $('.article-container-visible')
+
+    for (let i =0;i<articleTitles.length;i++) {
+        articleTitles[i].addEventListener('click',function (e) {
+            e.preventDefault();
+            for(let j = 0;j<articleTitles.length;j++) {
+                articleTitles[j].classList.remove('active')
+                articles[j].classList.remove('active')
+            }
+            articleTitles[i].classList.add('active')
+            articles[i].classList.add('active')
+        })
+    }
 });
